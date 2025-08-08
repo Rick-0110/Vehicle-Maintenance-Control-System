@@ -144,3 +144,4 @@ C:\Users\Windows\Documents\Estudando\SistemaDeControleVeiculos\obj\Debug\net8.0\
 C:\Users\Windows\Documents\Estudando\SistemaDeControleVeiculos\obj\Debug\net8.0\SistemaDeControleVeiculos.pdb
 C:\Users\Windows\Documents\Estudando\SistemaDeControleVeiculos\obj\Debug\net8.0\SistemaDeControleVeiculos.genruntimeconfig.cache
 C:\Users\Windows\Documents\Estudando\SistemaDeControleVeiculos\obj\Debug\net8.0\ref\SistemaDeControleVeiculos.dll
+C:\Users\Windows\Documents\Estudando\SistemaDeControleVeiculos\obj\Debug\net8.0\SistemaDeControleVeiculos.sourcelink.json
