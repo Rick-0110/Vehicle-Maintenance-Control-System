@@ -1,8 +1,14 @@
+
+@model SistemaDeControleVeiculos.Models.VeiculosModel
+
+
+
 <h1>Adicionar veículo</h1>
 
 
 <!-- Formulário de Adição de Veículo -->
-<form id="vehicleForm" action="#" method="post" enctype="multipart/form-data" novalidate>
+<form asp-action="Adicionar" method="post" enctype="multipart/form-data" novalidate>
+
   <!-- Placa -->
   <div class="mb-3">
     <label for="plate" class="form-label">Placa</label>

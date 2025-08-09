@@ -1,5 +1,7 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<SistemaDeControleVeiculos.Models.VeiculosModel>
+
+@{
+    ViewData["Title"] = "Lista de Veículos";
 }
 
 
@@ -7,38 +9,29 @@
     <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">Primeiro</th>
-      <th scope="col">Último</th>
-      <th scope="col">Nickname</th>
+          <tr>
+            <th>#</th>
+            <th>Placa</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Ano</th>
+            <th>Ações</th>
+        </tr>
       <td></td>
     </tr>
   </thead>
   <tbody>
     <tr>
+        @foreach(var v in Model)
+        {
+            <th scope="row">@v.Id</th>
+            <td>@v.Placa</td>
+            <td>@v.Marca</td>
+            <td>@v.Modelo</td>
+            <td>@v.Ano</td>
+            <td><button type="button" class="btn btn-outline-primary">Editar</button></td>
         
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@@mdo</td>
-      <td><button type="button" class="btn btn-outline-primary">Editar</button></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@@fat</td>
-      <td><button type="button" class="btn btn-outline-primary">Editar</button></td>
-    </tr>
-    <tr>
-        
-      <th scope="row">3</th>
-      <td>Larry</td>
-      
-      <td>the Bird</td>
-      <td>@@twitter</td>
-      <td><button type="button" class="btn btn-outline-primary">Editar</button></td>
-    </tr>
+  }
   </tbody>
 </table>
 
