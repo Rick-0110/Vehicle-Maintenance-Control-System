@@ -1,81 +1,10 @@
-
 @model SistemaDeControleVeiculos.Models.VeiculosModel
 
-
-
-<h1>Adicionar veículo</h1>
-
-
-<!-- Formulário de Adição de Veículo -->
 <form asp-action="Adicionar" method="post" enctype="multipart/form-data" novalidate>
-
-  <!-- Placa -->
-  <div class="mb-3">
-    <label for="plate" class="form-label">Placa</label>
-    <input type="text" class="form-control" id="plate" name="Plate" placeholder="ABC-1234" maxlength="10" required pattern="^[A-Za-z0-9-]{6,10}$" />
-    <div class="form-text">Formato exemplo: ABC-1234 (valide conforme o padrão desejado).</div>
-  </div>
-
-  <!-- Marca -->
-  <div class="mb-3">
-    <label for="brand" class="form-label">Marca</label>
-    <input type="text" class="form-control" id="brand" name="Brand" placeholder="Ex: Ford, Volkswagen" required />
-  </div>
-
-  <!-- Modelo -->
-  <div class="mb-3">
-    <label for="model" class="form-label">Modelo</label>
-    <input type="text" class="form-control" id="model" name="Model" placeholder="Ex: Gol, Fiesta" required />
-  </div>
-
-  <!-- Ano -->
-  <div class="mb-3">
-    <label for="year" class="form-label">Ano</label>
-    <input type="number" class="form-control" id="year" name="Year" placeholder="2020" min="1900" max="2099" required />
-  </div>
-
-  <!-- Quilometragem -->
-  <div class="mb-3">
-    <label for="mileage" class="form-label">Quilometragem atual (km)</label>
-    <input type="number" class="form-control" id="mileage" name="Mileage" placeholder="120000" min="0" required />
-  </div>
-
-  <!-- Cor -->
-  <div class="mb-3">
-    <label for="color" class="form-label">Cor</label>
-    <input type="text" class="form-control" id="color" name="Color" placeholder="Ex: Prata" />
-  </div>
-
-  <!-- Proprietário / Responsável -->
-  <div class="mb-3">
-    <label for="owner" class="form-label">Proprietário</label>
-    <input type="text" class="form-control" id="owner" name="Owner" placeholder="Nome do proprietário" />
-  </div>
-
-  <!-- Observações -->
-  <div class="mb-3">
-    <label for="notes" class="form-label">Observações</label>
-    <textarea class="form-control" id="notes" name="Notes" rows="3" placeholder="Observações sobre o veículo (opcional)"></textarea>
-  </div>
-
-  <!-- Foto do veículo -->
-  <div class="mb-3">
-    <label for="photo" class="form-label">Foto do veículo (opcional)</label>
-    <input class="form-control" type="file" id="photo" name="Photo" accept="image/*" />
-    <div class="form-text">PNG/JPG - máximo recomendado 3MB.</div>
-    <div class="mt-2">
-      <img id="photoPreview" src="#" alt="Pré-visualização da foto" style="display:none; max-width:300px; border-radius:8px; box-shadow:0 1px 4px rgba(0,0,0,.1);" />
-    </div>
-  </div>
-
-  <!-- Check de ativo -->
-  <div class="form-check mb-3">
-    <input class="form-check-input" type="checkbox" value="true" id="isActive" name="IsActive" checked>
-    <label class="form-check-label" for="isActive">Veículo ativo</label>
-  </div>
-
-  <!-- Botões -->
-  <button type="submit" class="btn btn-primary">Adicionar veículo</button>
-  <button type="reset" class="btn btn-secondary ms-2">Limpar</button>
+  <input type="text" name="Placa" placeholder="ABC-1234" required />
+  <input type="text" name="Marca" placeholder="Ford" required />
+  <input type="text" name="Modelo" placeholder="Fiesta" required />
+  <input type="number" name="Ano" placeholder="2020" min="1900" max="2099" required />
+  <input type="number" name="Quilometragem" placeholder="120000" min="0" required />
+  <button type="submit">Adicionar veículo</button>
 </form>
-

@@ -1,39 +1,27 @@
 ﻿@model IEnumerable<SistemaDeControleVeiculos.Models.VeiculosModel>
 
-@{
-    ViewData["Title"] = "Lista de Veículos";
-}
+<h1>Lista de Veículos</h1>
 
-
-    <h1 class="display-4">Lista de veículos</h1>
-    <table class="table">
-  <thead class="thead-dark">
+<table class="table">
+  <thead>
     <tr>
-          <tr>
-            <th>#</th>
-            <th>Placa</th>
-            <th>Marca</th>
-            <th>Modelo</th>
-            <th>Ano</th>
-            <th>Ações</th>
-        </tr>
-      <td></td>
+      <th>Placa</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Ano</th>
+      <th>Quilometragem</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-        @foreach(var v in Model)
-        {
-            <th scope="row">@v.Id</th>
-            <td>@v.Placa</td>
-            <td>@v.Marca</td>
-            <td>@v.Modelo</td>
-            <td>@v.Ano</td>
-            <td><button type="button" class="btn btn-outline-primary">Editar</button></td>
-        
-  }
+    @foreach(var veiculo in Model)
+    {
+        <tr>
+            <td>@veiculo.Placa</td>
+            <td>@veiculo.Marca</td>
+            <td>@veiculo.Modelo</td>
+            <td>@veiculo.Ano</td>
+            <td>@veiculo.Quilometragem</td>
+        </tr>
+    }
   </tbody>
 </table>
-
-
-

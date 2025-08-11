@@ -14,11 +14,13 @@ public HomeController(BancoContext context)
         _context = context;
      
     }
+    
     public IActionResult Index()
     {
         var veiculos = _context.Veiculos.ToList();
         return View(veiculos);
     }
+    [HttpGet]
   public IActionResult Adicionar()
     {
         return View();
